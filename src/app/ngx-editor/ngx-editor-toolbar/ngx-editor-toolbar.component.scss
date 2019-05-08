@@ -2,6 +2,20 @@
 @import "./src/assets/styles/_buttons";
 @import "./src/assets/styles/_forms";
 
+.checkbox{
+  opacity: unset !important;
+  height: auto !important;
+  width: auto !important;
+  pointer-events: all !important;
+  z-index: auto !important;
+  margin-left: -7%;
+    margin-top: 2%;
+}
+
+.margin-top-1{
+  margin-top: 1%;
+}
+
 .ngx-toolbar {
   display: flex;
   flex-wrap: wrap;

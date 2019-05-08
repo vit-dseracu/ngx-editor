@@ -157,7 +157,7 @@
           required>
       </div>
       <div class="form-check">
-        <input type="checkbox" class="form-check-input" id="urlNewTab" formControlName="urlNewTab">
+        <input type="checkbox" class="form-check-input checkbox" id="urlNewTab" formControlName="urlNewTab">
         <label class="form-check-label" for="urlNewTab">Open in new tab</label>
       </div>
       <button type="submit" class="btn-primary btn-sm btn">Submit</button>
@@ -252,7 +252,7 @@
       <form autocomplete="off">
         <div class="form-group">
           <label for="hexInput" class="small">Hex Color</label>
-          <input type="text" class="form-control-sm" id="hexInput" name="hexInput" maxlength="7" placeholder="HEX Color"
+          <input type="color" class="form-control-sm" id="hexInput" name="hexInput" maxlength="7" placeholder="HEX Color"
             [(ngModel)]="hexColor" required>
         </div>
         <button type="button" class="btn-primary btn-sm btn" (click)="insertColor(hexColor, selectedColorTab)">Submit</button>
@@ -267,10 +267,14 @@
     <form autocomplete="off">
       <div class="form-group">
         <label for="fontSize" class="small">Font Size</label>
-        <input type="text" class="form-control-sm" id="fontSize" name="fontSize" placeholder="Font size in px/rem"
-          [(ngModel)]="fontSize" required>
+        <button class="btn-primary btn-sm btn" (click)="setFontSize('2em')">Heading 1</button><br>
+        <button class="btn-primary btn-sm btn margin-top-1" (click)="setFontSize('1.5em')">Heading 2</button><br>
+        <button class="btn-primary btn-sm btn margin-top-1" (click)="setFontSize('1.17em')">Heading 3</button><br>
+        <button class="btn-primary btn-sm btn margin-top-1" (click)="setFontSize('1em')">Heading 4</button><br>
+        <button class="btn-primary btn-sm btn margin-top-1" (click)="setFontSize('0.83em')">Heading 5</button><br>
+        <button class="btn-primary btn-sm btn margin-top-1" (click)="setFontSize('0.67em')">Heading 6</button>
+
       </div>
-      <button type="button" class="btn-primary btn-sm btn" (click)="setFontSize(fontSize)">Submit</button>
     </form>
   </div>
 </ng-template>
